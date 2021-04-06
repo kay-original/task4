@@ -1,0 +1,32 @@
+body{
+  font-family: Lato;
+}
+main{
+  width: 260px;
+  height: 360px;
+  padding: 40px 10px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: crimson;
+  border-radius: 20px;
+  margin-top: 40px;
+  align-items: center;
+}
+#display{
+  height: 45px;
+  margin-bottom: 8px;
+  background-color: rgb(239, 239, 239);
+}
+.number,.symbol{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 3px;
+  
+}
+.bottom{
+  width: 200px;
+  height: 40px;
+  margin: 3px;
+  border-radius: 20px;
+}
