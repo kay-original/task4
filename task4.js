@@ -27,93 +27,12 @@ function initial(){
   minus.disabled = true;
 }
 function edit(elem){
-  display.value = display.value+elem.value;
-  if(display.value==="0"){
-    one.disabled=true;
-    two.disabled=true;
-    three.disabled=true;
-    four.disabled=true;
-    five.disabled=true;
-    six.disabled=true;
-    seven.disabled=true;
-    eight.disabled=true;
-    nine.disabled=true;
-    zerozero.disabled=true;
+  if (display.value === "0") {
+    display.value = elem.value;
   }
-  else if(display.value==="0."){
-    one.disabled=false;
-    two.disabled=false;
-    three.disabled=false;
-    four.disabled=false;
-    five.disabled=false;
-    six.disabled=false;
-    seven.disabled=false;
-    eight.disabled=false;
-    nine.disabled=false;
-    zerozero.disabled=false;    
-    point.divided=true;
+  else{
+    display.value = display.value+elem.value;
   }
-  else if(display.value==="0/"){
-    one.disabled=false;
-    two.disabled=false;
-    three.disabled=false;
-    four.disabled=false;
-    five.disabled=false;
-    six.disabled=false;
-    seven.disabled=false;
-    eight.disabled=false;
-    nine.disabled=false;
-    zerozero.disabled=false;    
-  }
-  else if(display.value==="0/"){
-    one.disabled=false;
-    two.disabled=false;
-    three.disabled=false;
-    four.disabled=false;
-    five.disabled=false;
-    six.disabled=false;
-    seven.disabled=false;
-    eight.disabled=false;
-    nine.disabled=false;
-    zerozero.disabled=false;    
-  }
-  else if(display.value==="0+"){
-    one.disabled=false;
-    two.disabled=false;
-    three.disabled=false;
-    four.disabled=false;
-    five.disabled=false;
-    six.disabled=false;
-    seven.disabled=false;
-    eight.disabled=false;
-    nine.disabled=false;
-    zerozero.disabled=false;    
-  }
-  else if(display.value==="0-"){
-    one.disabled=false;
-    two.disabled=false;
-    three.disabled=false;
-    four.disabled=false;
-    five.disabled=false;
-    six.disabled=false;
-    seven.disabled=false;
-    eight.disabled=false;
-    nine.disabled=false;
-    zerozero.disabled=false;    
-  }
-  else if(display.value==="0*"){
-    one.disabled=false;
-    two.disabled=false;
-    three.disabled=false;
-    four.disabled=false;
-    five.disabled=false;
-    six.disabled=false;
-    seven.disabled=false;
-    eight.disabled=false;
-    nine.disabled=false;
-    zerozero.disabled=false;    
-  }
-  
   plus.disabled = false;
   divided.disabled = false;
   multi.disabled = false;
