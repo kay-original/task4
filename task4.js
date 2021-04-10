@@ -1,5 +1,7 @@
 const display = document.getElementById("display");
 
+const symbol = document.getElementsByClassName("symbol")
+
 const plus = document.getElementById("plus");
 const divided = document.getElementById("divided");
 const multi = document.getElementById("multi");
@@ -38,7 +40,13 @@ function edit(elem){
   multi.disabled = false;
   minus.disabled = false;
 }
+
 function calc(){
-  display.value = new Function("return " + display.value)();
+  if(display.value === ""){
+    display.value === "";
+  }
+  else{
+    display.value = new Function("return " + display.value)();
+  }
 }
 initial();
