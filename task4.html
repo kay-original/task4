@@ -1,48 +1,52 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
   <head>
-    <!-bootstanp->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <!-fontawesome->
-    <script src="https://kit.fontawesome.com/bc423e1c59.js" crossorigin="anonymous"></script>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <link rel="stylesheet" href="task4.css">
     <title>電卓</title>
+    <link rel="stylesheet" href="task4.css">
   </head>
   <body>
-    <main>
-      <input type="text" id="display"/>
-      <div>
-        <button class="number" value="7" onclick="edit(this)">7</button>
-        <button class="number" value="8" onclick="edit(this)">8</button>
-        <button class="number" value="9" onclick="edit(this)">9</button>
-        <button class="symbol" value="/" id=divided onclick="edit(this)">÷</button>
+    <div class = "container">
+<!--      計算結果を出力する場所-->
+      <div id = "output_total" class="output ">0</div>
+<!--      計算過程を出力する -->
+      <div id = "output_sub" class="output active">0</div>
+<!--      ボタンを配置する場所-->
+      <div class = 'input'>
+          <section class = 'row'>
+            <div id = "clear">AC</div>
+            <div class = "num_bth"></div>
+            <div class = "num_bth" id="bs">BS</div>       
+            <div class = "num_bth cal" data-index-id= '/'>÷</div>
+          </section>
+          <section class = 'row'>
+            <div class = "num_bth one_nine " data-index-id = 7 >7</div>
+            <div class = "num_bth one_nine " data-index-id = 8 >8</div>
+            <div class = "num_bth one_nine " data-index-id = 9 >9</div>
+            <div class = "num_bth cal" data-index-id = '*'>×</div>
+          </section>
+          <section class = 'row'>
+            <div class = "num_bth one_nine " data-index-id = 4 >4</div>
+            <div class = "num_bth one_nine " data-index-id = 5 >5</div>
+            <div class = "num_bth one_nine " data-index-id = 6 >6</div>
+            <div class = "num_bth cal" data-index-id = '-'>－</div>     
+          </section>
+          <section class = 'row'>
+            <div class = "num_bth  one_nine" data-index-id = 1 >1</div>
+            <div class = "num_bth  one_nine" data-index-id = 2 >2</div>
+            <div class = "num_bth one_nine " data-index-id = 3 >3</div>
+            <div class = "num_bth cal" data-index-id = '+'>+</div>
+          </section>
+          <section class = 'row'>
+            <div class = "num_bth" data-index-id = 00 >00</div>
+            <div class = "num_bth" id="zero" data-index-id = 0 >0</div>
+            <div class = "num_bth" id="point" data-index-id = . >.</div>
+            <div id = 'equal_btn'>=</div>       
+          </section>        
       </div>
-      <div>
-        <button class="number" value="4" onclick="edit(this)">4</button>
-        <button class="number" value="5" onclick="edit(this)">5</button>
-        <button class="number" value="6" onclick="edit(this)">6</button>
-        <button class="symbol" value="*" id=multi onclick="edit(this)">×</button>
-      </div>
-      <div>
-        <button class="number" value="1" onclick="edit(this)">1</button>
-        <button class="number" value="2" onclick="edit(this)">2</button>
-        <button class="number" value="3" onclick="edit(this)">3</button>
-        <button class="symbol" value="-"id="minus"  onclick="edit(this)">-</button>
-      </div>
-      <div>
-        <button class="number" value="00" onclick="edit(this)">00</button>
-        <button class="number" value="0" onclick="edit(this)">0</button>
-        <button class="number" value="." onclick="edit(this)">.</button>
-        <button class="symbol" value="+" id="plus" onclick="edit(this)">+</button>
-      </div>
-      <div>
-        <button class="bottom" onclick="window.location.reload();">AC</button>
-        <button class="bottom" onclick="calc()">=</button>
-      </div>
-    </main>
-  <script src="task4.js"></script>
+    </div>
+    <script src="task4.js"></script>
   </body>
 </html>
+
+
